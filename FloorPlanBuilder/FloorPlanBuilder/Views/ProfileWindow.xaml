@@ -1,0 +1,61 @@
+﻿<views:BaseWindow x:Class="FloorPlanBuilder.Views.ProfileWindow"
+				  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				  xmlns:config="clr-namespace:FloorPlanBuilder.Config"
+				  xmlns:enums="clr-namespace:FloorPlanBuilder.Config.Enums"
+				  xmlns:views="clr-namespace:FloorPlanBuilder.Views"
+				  xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+				  mc:Ignorable="d"
+				  Title="Настройки"
+				  UseLayoutRounding="True"
+				  SizeToContent="WidthAndHeight"
+				  WindowStartupLocation="CenterOwner"
+				  d:DataContext="{d:DesignInstance config:Profile}">
+
+	<DockPanel Margin="10">
+		<StackPanel DockPanel.Dock="Bottom"
+					Orientation="Horizontal"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Bottom"
+					Margin="0,20,0,0">
+			<StackPanel.Resources>
+				<Style TargetType="{x:Type Button}"
+					   BasedOn="{StaticResource DragonMetroButton}">
+					<Setter Property="MinWidth"
+							Value="90" />
+				</Style>
+			</StackPanel.Resources>
+
+			<Button Content="Сохранить"
+					Command="{Binding SaveCommand}"
+					CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+
+			<Button Content="Применить"
+					Margin="15,0"
+					Command="{Binding ApplyCommand}"
+					CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+
+			<Button Content="Отменить"
+					Command="{Binding CancelCommand}"
+					CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+		</StackPanel>
+
+		<StackPanel>
+			<Label Content="Способ создания документов"
+				   FontSize="14"
+				   Foreground="{StaticResource AccentColorBrush}" />
+
+			<StackPanel Margin="15,0,0,0">
+				<RadioButton Content="Сторонняя библиотека / DXF"
+							 IsChecked="{Binding Path=BuildingType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static enums:BuildingType.NetDxf}}"
+							 Margin="0,5,0,0" />
+
+				<RadioButton Content="AutoCAD / DWG"
+							 IsChecked="{Binding Path=BuildingType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter={x:Static enums:BuildingType.Autocad}}"
+							 Margin="0,5,0,0" />
+			</StackPanel>
+		</StackPanel>
+	</DockPanel>
+</views:BaseWindow>

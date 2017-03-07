@@ -1,0 +1,705 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+					xmlns:converters="http://metro.mahapps.com/winfx/xaml/shared">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Buttons.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Calendar.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.CheckBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ComboBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ContextMenu.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.DataGrid.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.DatePicker.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Expander.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.GroupBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Label.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ListBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ListView.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Page.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.PasswordBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ProgressBar.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.RadioButton.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Scrollbars.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Slider.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.StatusBar.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.TabControl.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.TextBlock.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.TextBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ToolBar.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Tooltip.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.TreeView.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+	<DrawingGroup x:Key="PointLogoForTaskbar">
+		<GeometryDrawing Brush="WhiteSmoke"
+						 Geometry="M29.902978,4.822998L24.976979,9.7656794 27.649358,12.400877C28.041337,12.787903 28.045339,13.418945 27.658359,13.811972 27.463368,14.009984 27.20538,14.108991 26.948394,14.108991 26.695407,14.108991 26.44242,14.013985 26.24743,13.821972L23.568206,11.179224 22.507545,12.243479 26.654391,16.409966C27.04337,16.798973 27.041369,17.431986 26.651393,17.820993 26.457404,18.014997 26.201419,18.110998 25.947434,18.110998 25.691449,18.110998 25.434464,18.012997 25.240476,17.816994L21.098962,13.656834 19.966029,14.793603 22.623363,17.434061C23.013377,17.822054 23.015378,18.454042 22.626363,18.845036 22.432355,19.041031 22.175344,19.139029 21.919333,19.139029 21.665324,19.139029 21.410314,19.043032 21.216306,18.849035L18.557395,16.207008 17.332259,17.436295 21.357476,21.47287C21.746472,21.862898 21.746472,22.494946 21.355475,22.883974 21.161477,23.077988 20.90648,23.174995 20.651481,23.174995 20.395484,23.174995 20.139485,23.077988 19.945487,22.881973L15.923668,18.849655 14.790614,19.986547 17.37449,22.585831C17.763486,22.975864 17.761487,23.60792 17.37049,23.996954 17.176492,24.190969 16.921494,24.28698 16.667497,24.28698 16.411498,24.28698 16.154502,24.188971 15.960503,23.992952L13.382028,21.399904 12.182528,22.603466 16.20748,26.620159C16.598477,27.010126 16.598477,27.641077 16.209479,28.031046 16.015481,28.22703 15.758482,28.324022 15.503484,28.324022 15.248485,28.324022 14.993486,28.22703 14.798487,28.033045L10.773974,24.01679 9.644393,25.150198 12.230315,27.67391C12.624293,28.058937 12.632294,28.690979 12.247314,29.085005 12.051325,29.286018 11.792339,29.386024 11.533353,29.386024 11.282367,29.386024 11.03038,29.291019 10.83639,29.102007L8.2360096,26.563351 4.8090148,30.001953 29.929955,29.98999z M31.892964,0L31.927999,31.982971 0,32 15.06639,16.883045 15.074223,16.86985C15.110883,16.814575 15.153647,16.762148 15.202522,16.71352 15.251272,16.66489 15.303787,16.622341 15.359126,16.585873L15.367477,16.580948z">
+			<GeometryDrawing.Pen>
+				<Pen Thickness="0" />
+			</GeometryDrawing.Pen>
+		</GeometryDrawing>
+	</DrawingGroup>
+
+	<!-- Стиль Button, заменяющий одноименной стиль из MahApps. -->
+	<Style x:Key="DragonMetroButton"
+		   TargetType="{x:Type Button}"
+		   BasedOn="{StaticResource MetroButton}">
+		<Setter Property="controls:ButtonHelper.PreserveTextCase"
+				Value="True" />
+		<Setter Property="Padding"
+				Value="10,5" />
+		<Setter Property="MinHeight"
+				Value="25" />
+		<Setter Property="FontSize"
+				Value="{DynamicResource ContentFontSize}" />
+	</Style>
+
+	<!-- Стиль ToggleButton, заменяющий одноименной стиль из MahApps. -->
+	<Style x:Key="DragonMetroToggleButton"
+		   TargetType="{x:Type ToggleButton}"
+		   BasedOn="{StaticResource MetroToggleButton}">
+		<Setter Property="controls:ButtonHelper.PreserveTextCase"
+				Value="True" />
+		<Setter Property="Padding"
+				Value="10,5" />
+		<Setter Property="MinHeight"
+				Value="25" />
+		<Setter Property="FontSize"
+				Value="{DynamicResource ContentFontSize}" />
+	</Style>
+
+	<!-- Стиль DataGrid, заменяющий одноименной стиль из MahApps. -->
+	<!-- Убраны CapsCase из заголовков столбцов. -->
+	<Style x:Key="DragonMetroDataGridColumnHeader"
+		   TargetType="{x:Type DataGridColumnHeader}"
+		   BasedOn="{StaticResource MetroDataGridColumnHeader}">
+		<Setter Property="HorizontalContentAlignment"
+				Value="Center" />
+		<Setter Property="controls:ControlsHelper.ContentCharacterCasing"
+				Value="Normal" />
+	</Style>
+	<Style x:Key="DragonMetroDataGrid"
+		   TargetType="{x:Type DataGrid}"
+		   BasedOn="{StaticResource MetroDataGrid}">
+		<Setter Property="ColumnHeaderStyle"
+				Value="{DynamicResource DragonMetroDataGridColumnHeader}" />
+		<Setter Property="GridLinesVisibility"
+				Value="All" />
+	</Style>
+
+	<!-- Стиль GroupBox, заменяющий одноименной стиль из MahApps. -->
+	<!-- Убран CapsCase из заголовка. -->
+	<Style x:Key="DragonMetroGroupBox"
+		   TargetType="{x:Type GroupBox}"
+		   BasedOn="{StaticResource MetroGroupBox}">
+		<Setter Property="HeaderTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<ContentPresenter Content="{Binding RelativeSource={RelativeSource AncestorType={x:Type GroupBox}}, Path=Header, Mode=OneWay}">
+						<TextElement.Foreground>
+							<MultiBinding Converter="{x:Static converters:BackgroundToForegroundConverter.Instance}">
+								<Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type GroupBox}}"
+										 Path="Background"
+										 Mode="OneWay" />
+								<Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type GroupBox}}"
+										 Path="(controls:GroupBoxHelper.HeaderForeground)"
+										 Mode="OneWay" />
+							</MultiBinding>
+						</TextElement.Foreground>
+					</ContentPresenter>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- Стиль ContextMenu, заменяющий одноименной стиль из MahApps. -->
+	<!-- Уменьшен шрифт. -->
+	<Style x:Key="DragonMetroContextMenu"
+		   TargetType="{x:Type ContextMenu}"
+		   BasedOn="{StaticResource MetroContextMenu}">
+		<Setter Property="FontSize"
+				Value="12" />
+	</Style>
+
+	<Style x:Key="WizardNavigationButtonStyle"
+		   TargetType="{x:Type Button}"
+		   BasedOn="{StaticResource DragonMetroButton}">
+		<Style.Triggers>
+			<Trigger Property="Command"
+					 Value="{x:Null}">
+				<Setter Property="IsEnabled"
+						Value="False" />
+			</Trigger>
+		</Style.Triggers>
+		<Setter Property="MinWidth"
+				Value="75" />
+	</Style>
+
+	<Style x:Key="DragonMetroAnimatedTabControl"
+		   TargetType="{x:Type TabControl}">
+		<Setter Property="controls:TabControlHelper.Transition"
+				Value="Left" />
+		<Setter Property="Background"
+				Value="{x:Null}" />
+		<Setter Property="BorderBrush"
+				Value="{x:Null}" />
+		<Setter Property="ClipToBounds"
+				Value="True" />
+		<Setter Property="SnapsToDevicePixels"
+				Value="True" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TabControl}">
+					<Grid ClipToBounds="{TemplateBinding ClipToBounds}"
+						  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+						  KeyboardNavigation.TabNavigation="Local">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition x:Name="ColumnDefinition0" />
+							<ColumnDefinition x:Name="ColumnDefinition1"
+											  Width="0" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition x:Name="RowDefinition0"
+										   Height="Auto" />
+							<RowDefinition x:Name="RowDefinition1"
+										   Height="*" />
+						</Grid.RowDefinitions>
+						<Grid x:Name="HeaderGrid"
+							  Grid.Row="0"
+							  Grid.Column="0">
+							<TabPanel x:Name="HeaderPanel"
+									  Margin="5,5,5,0"
+									  IsItemsHost="True"
+									  KeyboardNavigation.TabIndex="1"
+									  Panel.ZIndex="1" />
+							<Border x:Name="GrayBorder"
+									BorderBrush="{DynamicResource GrayBrush6}"
+									BorderThickness="0,0,0,1"
+									HorizontalAlignment="Stretch"
+									VerticalAlignment="Bottom" />
+						</Grid>
+						<Border x:Name="ContentPanel"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								Background="{TemplateBinding Background}"
+								Grid.Row="1"
+								Grid.Column="0"
+								KeyboardNavigation.DirectionalNavigation="Contained"
+								KeyboardNavigation.TabIndex="2"
+								KeyboardNavigation.TabNavigation="Local">
+							<controls:TransitioningContentControl Transition="{TemplateBinding controls:TabControlHelper.Transition}"
+																  converters:ReloadBehavior.OnSelectedTabChanged="True"
+																  RestartTransitionOnContentChange="True">
+								<ContentPresenter x:Name="PART_SelectedContentHost"
+												  ContentSource="SelectedContent"
+												  Margin="{TemplateBinding Padding}"
+												  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							</controls:TransitioningContentControl>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="TabStripPlacement"
+								 Value="Bottom">
+							<Setter TargetName="HeaderGrid"
+									Property="Grid.Row"
+									Value="1" />
+							<Setter TargetName="HeaderPanel"
+									Property="Margin"
+									Value="5,0,5,5" />
+							<Setter TargetName="ContentPanel"
+									Property="Grid.Row"
+									Value="0" />
+							<Setter TargetName="RowDefinition0"
+									Property="Height"
+									Value="*" />
+							<Setter TargetName="RowDefinition1"
+									Property="Height"
+									Value="Auto" />
+							<Setter TargetName="GrayBorder"
+									Property="BorderThickness"
+									Value="0,1,0,0" />
+							<Setter TargetName="GrayBorder"
+									Property="HorizontalAlignment"
+									Value="Stretch" />
+							<Setter TargetName="GrayBorder"
+									Property="VerticalAlignment"
+									Value="Top" />
+						</Trigger>
+						<Trigger Property="TabStripPlacement"
+								 Value="Left">
+							<Setter Property="controls:TabControlHelper.Transition"
+									Value="Left" />
+							<Setter TargetName="HeaderGrid"
+									Property="Grid.Row"
+									Value="0" />
+							<Setter TargetName="HeaderGrid"
+									Property="Grid.Column"
+									Value="0" />
+							<Setter TargetName="HeaderPanel"
+									Property="Margin"
+									Value="5,5,0,5" />
+							<Setter TargetName="ContentPanel"
+									Property="Grid.Row"
+									Value="0" />
+							<Setter TargetName="ContentPanel"
+									Property="Grid.Column"
+									Value="1" />
+							<Setter TargetName="ColumnDefinition0"
+									Property="Width"
+									Value="Auto" />
+							<Setter TargetName="ColumnDefinition1"
+									Property="Width"
+									Value="*" />
+							<Setter TargetName="RowDefinition0"
+									Property="Height"
+									Value="*" />
+							<Setter TargetName="RowDefinition1"
+									Property="Height"
+									Value="0" />
+							<Setter TargetName="GrayBorder"
+									Property="BorderThickness"
+									Value="0,0,1,0" />
+							<Setter TargetName="GrayBorder"
+									Property="HorizontalAlignment"
+									Value="Right" />
+							<Setter TargetName="GrayBorder"
+									Property="VerticalAlignment"
+									Value="Stretch" />
+						</Trigger>
+						<Trigger Property="TabStripPlacement"
+								 Value="Right">
+							<Setter Property="controls:TabControlHelper.Transition"
+									Value="Right" />
+							<Setter TargetName="HeaderGrid"
+									Property="Grid.Row"
+									Value="0" />
+							<Setter TargetName="HeaderGrid"
+									Property="Grid.Column"
+									Value="1" />
+							<Setter TargetName="HeaderPanel"
+									Property="Margin"
+									Value="0,5,5,5" />
+							<Setter TargetName="ContentPanel"
+									Property="Grid.Row"
+									Value="0" />
+							<Setter TargetName="ContentPanel"
+									Property="Grid.Column"
+									Value="0" />
+							<Setter TargetName="ColumnDefinition0"
+									Property="Width"
+									Value="*" />
+							<Setter TargetName="ColumnDefinition1"
+									Property="Width"
+									Value="Auto" />
+							<Setter TargetName="RowDefinition0"
+									Property="Height"
+									Value="*" />
+							<Setter TargetName="RowDefinition1"
+									Property="Height"
+									Value="0" />
+							<Setter TargetName="GrayBorder"
+									Property="BorderThickness"
+									Value="1,0,0,0" />
+							<Setter TargetName="GrayBorder"
+									Property="HorizontalAlignment"
+									Value="Left" />
+							<Setter TargetName="GrayBorder"
+									Property="VerticalAlignment"
+									Value="Stretch" />
+						</Trigger>
+						<Trigger Property="IsEnabled"
+								 Value="False">
+							<Setter Property="Foreground"
+									Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="{x:Type TabControl}"
+		   BasedOn="{StaticResource DragonMetroAnimatedTabControl}" />
+
+	<Style x:Key="DragonMetroTabItem"
+		   TargetType="{x:Type TabItem}"
+		   BasedOn="{StaticResource MetroTabItem}">
+		<Setter Property="controls:ControlsHelper.HeaderFontSize"
+				Value="15" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="TabItem">
+					<Grid>
+						<Border x:Name="Border"
+								HorizontalAlignment="Stretch"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								Background="{TemplateBinding Background}"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+							<DockPanel HorizontalAlignment="Stretch"
+									   VerticalAlignment="Stretch">
+								<DockPanel.Resources>
+									<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+								</DockPanel.Resources>
+								<controls:ContentControlEx x:Name="ContentSite"
+														   Content="{TemplateBinding Header}"
+														   ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+														   ContentTemplate="{TemplateBinding HeaderTemplate}"
+														   ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+														   FontSize="{TemplateBinding controls:ControlsHelper.HeaderFontSize}"
+														   FontStretch="{TemplateBinding controls:ControlsHelper.HeaderFontStretch}"
+														   FontWeight="{TemplateBinding controls:ControlsHelper.HeaderFontWeight}"
+														   Foreground="{TemplateBinding Foreground}"
+														   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+														   Padding="{TemplateBinding Padding}"
+														   RecognizesAccessKey="True"
+														   ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(controls:ControlsHelper.ContentCharacterCasing)}"
+														   DockPanel.Dock="Top" />
+								<Rectangle x:Name="Underline"
+										   Margin="0,1,0,0"
+										   Height="2"
+										   HorizontalAlignment="Stretch"
+										   Visibility="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}, Path=(controls:TabControlHelper.IsUnderlined), Converter={StaticResource BooleanToVisibilityConverter}}"
+										   DockPanel.Dock="Bottom" />
+							</DockPanel>
+						</Border>
+						<Border x:Name="WhiteBorder"
+								BorderBrush="{DynamicResource WhiteColorBrush}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="TabStripPlacement"
+								 Value="Left">
+							<Setter TargetName="ContentSite"
+									Property="DockPanel.Dock"
+									Value="Left" />
+							<Setter TargetName="Underline"
+									Property="DockPanel.Dock"
+									Value="Right" />
+							<Setter TargetName="Underline"
+									Property="Width"
+									Value="2" />
+							<Setter TargetName="Underline"
+									Property="Height"
+									Value="Auto" />
+							<Setter TargetName="Underline"
+									Property="Margin"
+									Value="1,0,0,0" />
+							<Setter TargetName="Border"
+									Property="BorderThickness"
+									Value="1,1,0,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="BorderThickness"
+									Value="0,0,1,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="Margin"
+									Value="0,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="HorizontalAlignment"
+									Value="Right" />
+							<Setter TargetName="WhiteBorder"
+									Property="VerticalAlignment"
+									Value="Stretch" />
+						</Trigger>
+						<Trigger Property="TabStripPlacement"
+								 Value="Top">
+							<Setter TargetName="ContentSite"
+									Property="DockPanel.Dock"
+									Value="Top" />
+							<Setter TargetName="Underline"
+									Property="DockPanel.Dock"
+									Value="Bottom" />
+							<Setter TargetName="Underline"
+									Property="DockPanel.Dock"
+									Value="Right" />
+							<Setter TargetName="Underline"
+									Property="Height"
+									Value="2" />
+							<Setter TargetName="Underline"
+									Property="Width"
+									Value="Auto" />
+							<Setter TargetName="Underline"
+									Property="Margin"
+									Value="0,1,0,0" />
+							<Setter TargetName="Border"
+									Property="BorderThickness"
+									Value="1,1,1,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="BorderThickness"
+									Value="0,0,0,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="Margin"
+									Value="1,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="HorizontalAlignment"
+									Value="Stretch" />
+							<Setter TargetName="WhiteBorder"
+									Property="VerticalAlignment"
+									Value="Bottom" />
+						</Trigger>
+						<Trigger Property="TabStripPlacement"
+								 Value="Right">
+							<Setter TargetName="ContentSite"
+									Property="DockPanel.Dock"
+									Value="Right" />
+							<Setter TargetName="Underline"
+									Property="DockPanel.Dock"
+									Value="Left" />
+							<Setter TargetName="Underline"
+									Property="Width"
+									Value="2" />
+							<Setter TargetName="Underline"
+									Property="Height"
+									Value="Auto" />
+							<Setter TargetName="Underline"
+									Property="Margin"
+									Value="0,0,1,0" />
+							<Setter TargetName="Border"
+									Property="BorderThickness"
+									Value="0,1,1,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="BorderThickness"
+									Value="1,0,0,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="Margin"
+									Value="0,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="HorizontalAlignment"
+									Value="Left" />
+							<Setter TargetName="WhiteBorder"
+									Property="VerticalAlignment"
+									Value="Stretch" />
+						</Trigger>
+						<Trigger Property="TabStripPlacement"
+								 Value="Bottom">
+							<Setter TargetName="ContentSite"
+									Property="DockPanel.Dock"
+									Value="Bottom" />
+							<Setter TargetName="Underline"
+									Property="DockPanel.Dock"
+									Value="Top" />
+							<Setter TargetName="Underline"
+									Property="Height"
+									Value="2" />
+							<Setter TargetName="Underline"
+									Property="Width"
+									Value="Auto" />
+							<Setter TargetName="Underline"
+									Property="Margin"
+									Value="0,0,0,1" />
+							<Setter TargetName="Border"
+									Property="BorderThickness"
+									Value="1,0,1,1" />
+							<Setter TargetName="WhiteBorder"
+									Property="BorderThickness"
+									Value="0,1,0,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="Margin"
+									Value="1,0" />
+							<Setter TargetName="WhiteBorder"
+									Property="HorizontalAlignment"
+									Value="Stretch" />
+							<Setter TargetName="WhiteBorder"
+									Property="VerticalAlignment"
+									Value="Top" />
+						</Trigger>
+						<Trigger Property="IsSelected"
+								 Value="True">
+							<Setter TargetName="ContentSite"
+									Property="TextElement.Foreground"
+									Value="{DynamicResource AccentColorBrush}" />
+							<Setter TargetName="Underline"
+									Property="Fill"
+									Value="{DynamicResource AccentColorBrush}" />
+							<Setter TargetName="Border"
+									Property="BorderBrush"
+									Value="{DynamicResource GrayBrush6}" />
+							<Setter TargetName="WhiteBorder"
+									Property="Visibility"
+									Value="Visible" />
+						</Trigger>
+						<Trigger Property="IsSelected"
+								 Value="False">
+							<Setter Property="TextElement.Foreground"
+									TargetName="ContentSite"
+									Value="{DynamicResource GrayNormalBrush}" />
+							<Setter Property="Fill"
+									TargetName="Underline"
+									Value="{DynamicResource GrayNormalBrush}" />
+							<Setter TargetName="Border"
+									Property="BorderBrush"
+									Value="Transparent" />
+							<Setter TargetName="WhiteBorder"
+									Property="Visibility"
+									Value="Collapsed" />
+						</Trigger>
+						<Trigger SourceName="ContentSite"
+								 Property="IsMouseOver"
+								 Value="True">
+							<Setter Property="TextElement.Foreground"
+									TargetName="ContentSite"
+									Value="{DynamicResource GrayHoverBrush}" />
+							<Setter Property="Fill"
+									TargetName="Underline"
+									Value="{DynamicResource GrayHoverBrush}" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsMouseOver"
+										   SourceName="ContentSite"
+										   Value="True" />
+								<Condition Property="IsSelected"
+										   Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter Property="TextElement.Foreground"
+									TargetName="ContentSite"
+									Value="{DynamicResource HighlightBrush}" />
+							<Setter Property="Fill"
+									TargetName="Underline"
+									Value="{DynamicResource HighlightBrush}" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- Стиль GridViewColumnHeader, заменяющий одноименной стиль из MahApps. -->
+	<!-- Уменьшен шрифт. -->
+	<Style x:Key="DragonMetroGridViewColumnHeader"
+		   TargetType="{x:Type GridViewColumnHeader}"
+		   BasedOn="{StaticResource MetroGridViewColumnHeader}">
+		<Setter Property="controls:ControlsHelper.ContentCharacterCasing"
+				Value="Normal" />
+	</Style>
+
+	<!-- Стиль Expander, заменяющий одноименной стиль из MahApps. -->
+	<!-- Уменьшен шрифт. -->
+	<Style x:Key="DragonMetroExpander"
+		   TargetType="{x:Type Expander}"
+		   BasedOn="{StaticResource MetroExpander}">
+		<Setter Property="controls:ControlsHelper.ContentCharacterCasing"
+				Value="Normal" />
+	</Style>
+
+	<!-- Стиль ListViewItem, заменяющий одноименной стиль из MahApps. -->
+	<!-- Отображает нижнюю линию строки. -->
+	<Style x:Key="DragonMetroListViewItem"
+		   TargetType="{x:Type ListViewItem}"
+		   BasedOn="{StaticResource MetroListViewItem}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListViewItem}">
+					<Border x:Name="Border"
+							Background="{TemplateBinding Background}"
+							BorderThickness="0,0,0,1"
+							BorderBrush="{DynamicResource GrayBrush7}"
+							SnapsToDevicePixels="true">
+						<Grid>
+							<GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+								<GridViewRowPresenter.Resources>
+									<Style TargetType="{x:Type TextBlock}">
+										<Setter Property="Foreground"
+												Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}, Path=Foreground}" />
+										<Style.Triggers>
+											<DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}"
+														 Value="True">
+												<Setter Property="Foreground"
+														Value="{DynamicResource AccentSelectedColorBrush}" />
+											</DataTrigger>
+											<DataTrigger Binding="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+														 Value="False">
+												<Setter Property="Foreground"
+														Value="{DynamicResource GrayNormalBrush}" />
+											</DataTrigger>
+											<MultiDataTrigger>
+												<MultiDataTrigger.Conditions>
+													<Condition Binding="{Binding Path=IsEnabled, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+															   Value="False" />
+													<Condition Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}}"
+															   Value="True" />
+												</MultiDataTrigger.Conditions>
+												<MultiDataTrigger.Setters>
+													<Setter Property="Foreground"
+															Value="{DynamicResource AccentSelectedColorBrush}" />
+												</MultiDataTrigger.Setters>
+											</MultiDataTrigger>
+										</Style.Triggers>
+									</Style>
+								</GridViewRowPresenter.Resources>
+							</GridViewRowPresenter>
+							<ContentPresenter x:Name="contentPresenter"
+											  Visibility="Collapsed" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="GridView.ColumnCollection"
+								 Value="{x:Null}">
+							<Setter TargetName="contentPresenter"
+									Property="Visibility"
+									Value="Visible" />
+						</Trigger>
+						<Trigger Property="IsSelected"
+								 Value="True">
+							<Setter TargetName="Border"
+									Property="Background"
+									Value="{DynamicResource AccentColorBrush}" />
+							<Setter Property="Foreground"
+									Value="{DynamicResource AccentSelectedColorBrush}" />
+						</Trigger>
+						<Trigger Property="IsMouseOver"
+								 Value="True">
+							<Setter TargetName="Border"
+									Property="Background"
+									Value="{DynamicResource AccentColorBrush3}" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsSelected"
+										   Value="true" />
+								<Condition Property="Selector.IsSelectionActive"
+										   Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter TargetName="Border"
+									Property="Background"
+									Value="{DynamicResource AccentColorBrush2}" />
+							<Setter Property="Foreground"
+									Value="{DynamicResource AccentSelectedColorBrush}" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}"
+		   BasedOn="{StaticResource DragonMetroButton}" />
+
+	<Style TargetType="{x:Type ContextMenu}"
+		   BasedOn="{StaticResource DragonMetroContextMenu}" />
+
+	<Style TargetType="{x:Type DataGrid}"
+		   BasedOn="{StaticResource DragonMetroDataGrid}" />
+
+	<Style TargetType="{x:Type Expander}"
+		   BasedOn="{StaticResource DragonMetroExpander}" />
+
+	<Style TargetType="{x:Type GridViewColumnHeader}"
+		   BasedOn="{StaticResource DragonMetroGridViewColumnHeader}" />
+
+	<Style TargetType="{x:Type GroupBox}"
+		   BasedOn="{StaticResource DragonMetroGroupBox}" />
+
+	<Style TargetType="{x:Type ListViewItem}"
+		   BasedOn="{StaticResource DragonMetroListViewItem}" />
+
+	<Style TargetType="{x:Type TabItem}"
+		   BasedOn="{StaticResource DragonMetroTabItem}" />
+
+	<Style TargetType="{x:Type ToggleButton}"
+		   BasedOn="{StaticResource DragonMetroToggleButton}" />
+</ResourceDictionary>
